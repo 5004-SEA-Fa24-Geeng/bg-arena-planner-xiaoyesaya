@@ -63,7 +63,6 @@ classDiagram
         + saveGame(String filename) void
         + addToList(String str, Stream<BoardGame> filtered) throws IllegalArgumentException: void
         + removeFromList(String str) throws IllegalArgumentException: void
-        - rangeParseHelper(String str int max): int[]
     }
     class Planner{
         - allGames: Set~BoardGame~
@@ -171,7 +170,7 @@ classDiagram
         + FilterProcessor()
         + applyFilter(String filter) Stream~BoardGame~
         + applySingleFilter() Stream~BoardGame~
-        + checkMatchCondition() Boolan
+        + checkMatchCondition() Boolean
     }
     class SortHelper {
         + SortHelper()
@@ -194,11 +193,20 @@ Write a test (in english) that you can picture for the class diagram you have cr
 
 You should feel free to number your brainstorm. 
 
-1. Test 1..
-2. Test 2..
-
-
-
+1. Test that the `GameList` Class properly returns the list of game names in ascending order ignoring case from `getGameNames()`
+2. Test that the `GameList` Class properly remove all the game completely in the list from `clear()`
+3. Test that the `GameList` Class properly return the number of games in the list from `count()`
+4. Test that the `GameList` Class properly saves the game in the list to a file from `saveGame()`
+5. Test that the `GameList` Class properly add a game or games to the list from `addToList()`
+6. Test that the `GameList` Class properly remove a game or games from the list from `removeFromList()`
+7. Test that the `Planner` Class properly filter and sort by name as default from `filter(String Filter)`
+8. Test that the `Planner` Class properly filter and sort by specific column from `filter(String Filter, GameData sortOn)`
+9. Test that the `Planner` Class properly filter and sort by specific column in ascending or descending order from `filter(String filter, GameData sortOn, boolean ascending)`
+10. Test that the `Planner` Class properly reset the collection to have no filters applied from `reset()`
+11. Test that the `FilterHelper` Class properly apply multiple filter conditions from `applyFilter(String filter)`
+12. Test that the `FilterHelper` Class properly apply a single filter condition from `applySingleFilter()`
+13. Test that the `FilterHelper` Class properly determine whether a game match the filtered condition from `checkMatchCondition()`
+14. Test that the `SortHelper` Class properly sorts a stream of BoardGame objects based on a given GameData field and support ascending and descending order from `applySort()`
 
 ## (FINAL DESIGN): Class Diagram
 
