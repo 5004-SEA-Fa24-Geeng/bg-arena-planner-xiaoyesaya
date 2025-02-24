@@ -149,6 +149,7 @@ classDiagram
 
     }
     class Operations{
+        <<enum>>
         EQUALS("=="), NOT_EQUALS("!="), GREATER_THAN(">"), LESS_THAN("<"), GREATER_THAN_EQUALS(
             ">="), LESS_THAN_EQUALS("<="), CONTAINS("~=")
         - operator: String
@@ -158,6 +159,7 @@ classDiagram
         + getOperatorFromStr(String str) Operations
     }
     class GameData {
+        <<enum>>
         NAME("objectname"), ID("objectid"), RATING("average"), DIFFICULTY("avgweight"), RANK("rank"), MIN_PLAYERS("minplayers"), MAX_PLAYERS("maxplayers"), MIN_TIME("minplaytime"), MAX_TIME("maxplaytime"), YEAR("yearpublished")
         - columnName: String
         - GameData
