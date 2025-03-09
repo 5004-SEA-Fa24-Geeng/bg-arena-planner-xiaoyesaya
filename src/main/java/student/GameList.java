@@ -17,6 +17,7 @@ import java.util.stream.Stream;
  * board game names as well as saving the list to a file.
  */
 public class GameList implements IGameList {
+    /** A set that stores the names of board games currently in the game list. */
     private final Set<String> listOfGames;
     /**
      * Constructor for the GameList.
@@ -86,7 +87,8 @@ public class GameList implements IGameList {
      * Add a game or multiple games to the list.
      * @param str      the string to parse and add games to the list.
      * @param filtered the filtered list to use as a basis for adding.
-     * @throws IllegalArgumentException If the input format is invalid, or if indices are out of bounds, or if a specified game cannot be found.
+     * @throws IllegalArgumentException If the input format is invalid, or if indices are out of bounds,
+     * or if a specified game cannot be found.
      */
     @Override
     public void addToList(String str, Stream<BoardGame> filtered) throws IllegalArgumentException {
@@ -135,7 +137,8 @@ public class GameList implements IGameList {
     /**
      * Remove a game or multiple games from the list.
      * @param str The string to parse and remove games from the list.
-     * @throws IllegalArgumentException If the input format is invalid, if indices are out of bounds, if the list is empty, or if a specified game cannot be found.
+     * @throws IllegalArgumentException If the input format is invalid, if indices are out of bounds,
+     * if the list is empty, or if a specified game cannot be found.
      */
     @Override
     public void removeFromList(String str) throws IllegalArgumentException {

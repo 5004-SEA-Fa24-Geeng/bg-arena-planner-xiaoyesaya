@@ -19,7 +19,7 @@ public class Planner implements IPlanner {
     private Set<BoardGame> filteredGames;
 
     /**
-     * Constructor for the Planner
+     * Constructor for the Planner.
      * @param games The complete collection of board games.
      */
     public Planner(Set<BoardGame> games) {
@@ -70,7 +70,7 @@ public class Planner implements IPlanner {
         Stream<BoardGame> stream = filteredGames.stream();
 
         String[] conditions = filter.split(",");
-        for (String condition : conditions){
+        for (String condition : conditions) {
             Operations op = Operations.getOperatorFromStr(condition);
             if (op == null) {
                 continue;

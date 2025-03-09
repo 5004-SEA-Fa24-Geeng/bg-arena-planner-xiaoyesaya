@@ -9,9 +9,11 @@ import java.util.Comparator;
 public final class Sort {
 
     /**
-     * Constructor for Sort
+     * Constructor for Sort.
      */
-    private Sort() {}
+    private Sort() {
+
+    }
 
     /**
      * Returns a comparator for sorting BoardGame objects based on the given attribute.
