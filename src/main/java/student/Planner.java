@@ -80,8 +80,8 @@ public class Planner implements IPlanner {
             if (parts.length != 2) {
                 continue;
             }
-            GameData column = GameData.fromString(parts[0]);
-            String value = parts[1];
+            GameData column = GameData.fromString(parts[0].trim());
+            String value = parts[1].trim();
             stream = stream.filter(game -> Filters.filter(game, column, op, value));
         }
         this.filteredGames = stream.sorted(Sort.getComparator(sortOn, ascending))
