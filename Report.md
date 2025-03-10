@@ -78,9 +78,9 @@ Instead of relying on strings which can lead to typos, the enum enforces correct
     ```java
     // your code here, don't forget the class name that is dropped in the switch block..
    
-   if (ct == CommandType.CMD_QUESTION || ct == CommandType.CMD_HELP) {
+   if (ct == CMD_QUESTION || ct == CMD_HELP) {
     processHelp();
-   } else if (ct == CommandType.INVALID) {
+   } else if (ct == INVALID) {
    CONSOLE.printf("%s%n", ConsoleText.INVALID);
    } else {
    CONSOLE.printf("%s%n", ConsoleText.INVALID);
