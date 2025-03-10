@@ -86,7 +86,7 @@ class PlannerTest {
 
     @Test
     void testFilter_MultipleFilters() {
-        List<BoardGame> result = planner.filter("rating>8,minplayers>=4").toList();
+        List<BoardGame> result = planner.filter("rating>8, minplayers>=4").toList();
 
         assertEquals(1, result.size());
         assertEquals("GoRami", result.get(0).getName());

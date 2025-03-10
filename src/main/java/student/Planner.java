@@ -69,7 +69,7 @@ public class Planner implements IPlanner {
         }
         Stream<BoardGame> stream = filteredGames.stream();
 
-        String[] conditions = filter.split(",");
+        String[] conditions = filter.split(", ");
         for (String condition : conditions) {
             Operations op = Operations.getOperatorFromStr(condition);
             if (op == null) {
