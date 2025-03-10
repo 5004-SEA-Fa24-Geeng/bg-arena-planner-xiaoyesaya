@@ -118,3 +118,14 @@ various spoken languages around the world? What about areas with internet access
 
 
 As a reminder, deeper thinking questions are meant to require some research and to be answered in a paragraph for with references. The goal is to open up some of the discussion topics in CS, so you are better informed going into industry. 
+
+
+As a previous student learning Japanese pedagogy, I learned how mutual understanding across culture was very important and difficult to acheive. An inappropriate translation will lead to unpleasant feeling to people in the target culture. For example, if translating "Welcome" in English to "irasshaimase" in Japanese in the airport will be strange as this is not a commercial setting, which could be offensive to Japanese people.
+I think it is the same when comes to localization, where a good localization will improve the impression of customers since they feel they are valued and their cultures are valued. A bad localization may reduce the global sales and love of customers. One famous bad localization is the KFC's translation of slogan "Finger-lickin' good" to "eat your fingers off." in Chinese ads, which may prevent customers from going to the restauarants. 
+However, to have good localization, it is more than translation. There are more things to be considered about such as the format of the date and address, the currency in different countries, and text adjusting for different languages. For example, the format of date in China usually start from date and end with year, which is different from US. It could cause confusion when using the US convention to write the date.
+
+## References
+
+[^1]: The pedagogy of performing another culture. Walker, Galal. https://openlibrary.org/works/OL15987920W/The_pedagogy_of_performing_another_culture. Accessed: 2025-03-10.
+[^2]: What is Software Localization? https://www.lionbridge.com/blog/content-transformation/what-is-software-localization-and-who-needs-it/. Accessed: 2025-03-10.
+[^3]: Is localisation still needed in modern softwate https://www.reddit.com/r/ExperiencedDevs/comments/17a86fq/is_localisation_still_needed_in_modern_softwate/ Accessed: 2025-03-10.
