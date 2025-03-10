@@ -33,7 +33,6 @@ public class GameList implements IGameList {
      */
     @Override
     public List<String> getGameNames() {
-        // TODO Auto-generated method stub
         return listOfGames.stream()
                 .sorted(String.CASE_INSENSITIVE_ORDER)
                 .collect(Collectors.toList());

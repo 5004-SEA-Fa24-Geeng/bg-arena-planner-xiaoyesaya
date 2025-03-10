@@ -6,9 +6,13 @@ code as it is meant to help you understand some of the concepts.
 ## Technical Questions
 
 1. What is the difference between == and .equals in java? Provide a code example of each, where they would return different results for an object. Include the code snippet using the hash marks (```) to create a code block.
+   == compares object references, which is the memory address, while .equals compares object contents if it is overridden in the class.
    ```java
    // your code here
-   
+   String a = new String("Hello");
+   String b = new String("Hello");
+   System.out.println(a == b); // return false
+   System.out.println(a.equals(b)); //return true if overridden, else false
    ```
 
 
@@ -16,7 +20,7 @@ code as it is meant to help you understand some of the concepts.
 
 2. Logical sorting can be difficult when talking about case. For example, should "apple" come before "Banana" or after? How would you sort a list of strings in a case-insensitive manner? 
 
-
+I can sort a list of strings in a case-insensitive way using String.CASE_INSENSITIVE_ORDER. For example in this program, I used in public List<String> getGameNames to show a current list of games sorted alphabetically and ignoring the case.
 
 
 
@@ -35,21 +39,24 @@ code as it is meant to help you understand some of the concepts.
     ```
     Why would the order in which we checked matter (if it does matter)? Provide examples either way proving your point. 
 
-
+The order matters because some operators (like >=) include >. If we check the shorter ones (i.e. >) first, they will match too early and give the wrong result.
 
 4. What is the difference between a List and a Set in Java? When would you use one over the other? 
 
-
-
+A List in Java allows duplicate elements and maintains the order of the items you add. A Set does not allow duplicates and does not guarantee order.
+I will use a List when I want to keep things in order or allow repeats. For example, I use a list of strings for sortedGames since they need to be in an order. On the other hand, I used set when I want to make sure there are no duplicates. For example, I use set of string to represent the names of board games currently in the game list.
 
 5. In [GamesLoader.java](src/main/java/student/GamesLoader.java), we use a Map to help figure out the columns. What is a map? Why would we use a Map here? 
 
-
+A map represents a mapping between a key and a value, which is in java.util package.
+In GamesLoader.java, a Map<GameData, Integer> is used in the processHeader method to associate each game data field (like NAME, MIN_PLAYERS, etc.) with its corresponding column index in the CSV file. This makes it easy to look up which column contains which data,
 
 
 6. [GameData.java](src/main/java/student/GameData.java) is actually an `enum` with special properties we added to help with column name mappings. What is an `enum` in Java? Why would we use it for this application?
 
-
+An enum is a class which represent a group of constants.
+In GameData.java, GameData is an enum that represents different column names from the CSV file, such as NAME, RATING, and MIN_PLAYERS.
+Instead of relying on strings which can lead to typos, the enum enforces correctness at compile time. I will not use a column name that does not exist.
 
 
 
@@ -70,6 +77,14 @@ code as it is meant to help you understand some of the concepts.
 
     ```java
     // your code here, don't forget the class name that is dropped in the switch block..
+   
+   if (ct == CommandType.CMD_QUESTION || ct == CommandType.CMD_HELP) {
+    processHelp();
+   } else if (ct == CommandType.INVALID) {
+   CONSOLE.printf("%s%n", ConsoleText.INVALID);
+   } else {
+   CONSOLE.printf("%s%n", ConsoleText.INVALID);
+   }
     
     ```
 
@@ -87,7 +102,12 @@ the current layout.
 Post a copy of the run with the updated languages below this. Use three back ticks (```) to create a code block. 
 
 ```text
-// your consoles output here
+*******Bienvenido a la BoardGame Arena Planner.*******
+
+Una herramienta para ayudar a las personas a planificar los juegos que
+quieren jugar en Board Game Arena.
+
+Para comenzar, ingrese su primer comando a continuacion, o escriba ? o ayuda para ver las opciones del comando.
 ```
 
 Now, thinking about localization - we have the question of why does it matter? The obvious

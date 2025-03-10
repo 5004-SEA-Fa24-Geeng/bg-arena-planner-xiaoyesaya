@@ -100,7 +100,7 @@ class PlannerTest {
     }
 
     @Test
-    void testFilter_InvalidOperatorAndFormat() {
+    void testFilter_InvalidFilter() {
         List<BoardGame> result1 = planner.filter("rating=9").toList();
         assertEquals(8, result1.size());
 
