@@ -143,7 +143,7 @@ public class GameList implements IGameList {
     @Override
     public void removeFromList(String str) throws IllegalArgumentException {
         // TODO Auto-generated method stub
-        if (str.matches(ADD_ALL)) {
+        if (str.equalsIgnoreCase(ADD_ALL)) {
             clear();
             return;
         }
