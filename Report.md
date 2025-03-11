@@ -50,7 +50,7 @@ I will use a List when I want to keep things in order or allow repeats. For exam
 5. In [GamesLoader.java](src/main/java/student/GamesLoader.java), we use a Map to help figure out the columns. What is a map? Why would we use a Map here? 
 
 A map represents a mapping between a key and a value, which is in java.util package.
-In GamesLoader.java, a Map<GameData, Integer> is used in the processHeader method to associate each game data field (like NAME, MIN_PLAYERS, etc.) with its corresponding column index in the CSV file. This makes it easy to look up which column contains which data,
+In GamesLoader.java, a Map<GameData, Integer> is used in the processHeader method to associate each game data field with its corresponding column index in the CSV file. This makes it easy to look up which column contains which data,
 
 
 6. [GameData.java](src/main/java/student/GameData.java) is actually an `enum` with special properties we added to help with column name mappings. What is an `enum` in Java? Why would we use it for this application?

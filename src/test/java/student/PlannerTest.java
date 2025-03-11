@@ -93,10 +93,28 @@ class PlannerTest {
     }
 
     @Test
+    void testFilter_SortOnYear() {
+        List<BoardGame> result = planner.filter("rating>5", GameData.YEAR).toList();
+        assertEquals("Go", result.get(0).getName());
+    }
+
+    @Test
+    void testFilter_SortOnRatingDescending() {
+        List<BoardGame> result = planner.filter("rating>5", GameData.RATING, false).toList();
+        assertEquals("Chess", result.get(0).getName());
+    }
+
+    @Test
     void testNullFilter() {
         List<BoardGame> result = planner.filter(null).toList();
-        assertEquals(0, result.size());
+        assertEquals(8, result.size());
         assertEquals("17 days", result.get(0).getName());
+    }
+
+    @Test
+    void testFilter_NoMatches() {
+        List<BoardGame> result = planner.filter("rating>15").toList();
+        assertTrue(result.isEmpty());
     }
 
     @Test
