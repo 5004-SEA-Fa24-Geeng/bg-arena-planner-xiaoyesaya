@@ -43,7 +43,6 @@ public class GameList implements IGameList {
      */
     @Override
     public void clear() {
-        // TODO Auto-generated method stub
         listOfGames.clear();
     }
 
@@ -54,7 +53,6 @@ public class GameList implements IGameList {
      */
     @Override
     public int count() {
-        // TODO Auto-generated method stub
         return listOfGames.size();
     }
 
@@ -68,7 +66,6 @@ public class GameList implements IGameList {
      */
     @Override
     public void saveGame(String filename) {
-        // TODO Auto-generated method stub
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
             for (String game : getGameNames()) {
@@ -91,7 +88,6 @@ public class GameList implements IGameList {
      */
     @Override
     public void addToList(String str, Stream<BoardGame> filtered) throws IllegalArgumentException {
-        // TODO Auto-generated method stub
         List<BoardGame> filteredList = filtered.toList();
         if (str.equalsIgnoreCase(ADD_ALL)) {
             for (BoardGame game : filteredList) {
@@ -141,7 +137,6 @@ public class GameList implements IGameList {
      */
     @Override
     public void removeFromList(String str) throws IllegalArgumentException {
-        // TODO Auto-generated method stub
         if (str.equalsIgnoreCase(ADD_ALL)) {
             clear();
             return;
